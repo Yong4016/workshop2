@@ -3,10 +3,7 @@
 import sys
 import string
 
-# words = sys.stdin.read().split()
-fhand = open("test.txt")
-words = fhand.read().split()
-
+words = sys.stdin.read().split()
 d = dict()
 for word in words:
 	t = word.translate(str.maketrans('', '', string.punctuation)).upper()
@@ -20,4 +17,3 @@ for key, value in d.items():
 l = sorted(l, reverse=True)
 for v, k in l:
 	print(k, v)
-
